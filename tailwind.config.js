@@ -10,6 +10,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-lexend-deca)', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
+      fontSize: {
+        '3xl': '3rem',
+      },
     },
   },
   plugins: [],

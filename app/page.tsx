@@ -109,7 +109,7 @@ export default function Home() {
         <div className="px-6 py-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-semibold">{getViewTitle()}</h1>
+              <h1 className="text-3xl font-semibold">{getViewTitle()}</h1>
               <span className="text-2xl text-gray-400">{taskCount}</span>
             </div>
           </div>
