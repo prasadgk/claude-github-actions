@@ -1,0 +1,43 @@
+name: Auto Create PR
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+      - '!master'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Auto PR from Claude Code
+          title: '[Claude Code] ${{ github.ref_name }}'
+          body: |
+            ## Summary
+            This PR was automatically created after commits were pushed by Claude Code.
+            
+            ### Branch: `${{ github.ref_name }}`
+            ### Commit: ${{ github.sha }}
+            
+            ## Changes
+            Please review the changes in this pull request.
+            
+            ---
+          branch: ${{ github.ref_name }}
+          base: main
+          draft: false
+          labels: |
+            claude-code
+            automated-pr
