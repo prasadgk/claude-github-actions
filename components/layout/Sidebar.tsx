@@ -60,7 +60,7 @@ export default function Sidebar({
     <div className="w-64 bg-gray-50 h-screen flex flex-col border-r border-gray-200">
       {/* Header */}
       <div className="p-4 flex items-center justify-between border-b border-gray-200">
-        <h1 className="text-xl font-semibold">Menu</h1>
+        <h1 className="text-xl font-semibold">oToDo</h1>
         <button onClick={onToggleCollapse} className="p-1 hover:bg-gray-200 rounded">
           <MenuIcon className="w-5 h-5" />
         </button>
