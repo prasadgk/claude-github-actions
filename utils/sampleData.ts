@@ -1,0 +1,62 @@
+import { Task } from '@/types';
+
+export const sampleTasks: Task[] = [
+  {
+    id: '1',
+    title: 'Research content ideas',
+    description: '',
+    completed: false,
+    listId: '1',
+    tags: [],
+    subtasks: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: '2',
+    title: 'Create a database of guest authors',
+    description: '',
+    completed: false,
+    listId: '1',
+    tags: [],
+    subtasks: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: '3',
+    title: 'Renew driver\'s license',
+    description: '',
+    completed: false,
+    dueDate: new Date('2022-03-22').toISOString(),
+    listId: '1',
+    tags: ['1'],
+    subtasks: [
+      { id: '1', title: 'Subtask', completed: false }
+    ],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: '4',
+    title: 'Consult accountant',
+    description: '',
+    completed: false,
+    listId: '3',
+    tags: [],
+    subtasks: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: '5',
+    title: 'Print business card',
+    description: '',
+    completed: false,
+    listId: '2',
+    tags: [],
+    subtasks: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+];

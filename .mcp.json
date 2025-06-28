@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "mcp-atlassian": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e", "CONFLUENCE_URL",
+        "-e", "CONFLUENCE_USERNAME",
+        "-e", "CONFLUENCE_API_TOKEN",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
+      "env": {
+        "CONFLUENCE_URL": "https://pdisoftware.atlassian.net/wiki",
+        "CONFLUENCE_USERNAME": "prasadgk@pdinet.com",
+        "CONFLUENCE_API_TOKEN": "ATATT3xFfGF0rb3eryvMGRb_l9YL64GwIx8zMN_fC2kA_NIKLtQfbVaar2AJXlVIakpD52bXirtY3_ArKl_grrFYWLBeLI15QzXG9HWslSyliy62UJ1FCAT6Y45fiPbNMK8aKbkIqfbFXwQF41dWOQxrP8qf-eyRJaXExkuIZ0CkAh6Im1_u290=537CD8E8"
+      }
+    },
+    "ado": {
+        "type": "stdio",
+        "command": "npx",
+        "args": [
+            "-y",
+            "@azure-devops/mcp",
+            "${input:ado_org = PDIDev}"
+        ]
+    }
+  }
+}
