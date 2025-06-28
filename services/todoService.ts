@@ -143,7 +143,6 @@ class TodoService {
     const tasks = this.getTasks();
     const today = new Date().toISOString().split('T')[0];
     return tasks.filter(task => 
-      !task.completed && 
       task.dueDate && 
       task.dueDate.startsWith(today)
     );
@@ -154,7 +153,6 @@ class TodoService {
     const tasks = this.getTasks();
     const today = new Date();
     return tasks.filter(task => 
-      !task.completed && 
       task.dueDate && 
       new Date(task.dueDate) > today
     );
