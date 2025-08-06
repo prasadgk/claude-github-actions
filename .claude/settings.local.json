@@ -9,7 +9,16 @@
       "Bash(npm install:*)",
       "Bash(rm:*)",
       "Bash(true)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "mcp__atlassian__getAccessibleAtlassianResources",
+      "mcp__atlassian__searchConfluenceUsingCql",
+      "mcp__ado__core_list_projects",
+      "mcp__ado__wit_get_work_item",
+      "mcp__ado__search_workitem",
+      "Bash(gh auth:*)",
+      "Bash(find:*)",
+      "Bash(gh api:*)",
+      "Bash(gh extension:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

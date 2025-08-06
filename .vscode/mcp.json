@@ -13,8 +13,12 @@
          "args": [
              "-y",
              "@azure-devops/mcp",
-             "${input:ado_org=PDIDev}"
+             "${input:ado_org}"
          ]
-      }
+      },
+      "atlassian": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
+    }
    }
 }

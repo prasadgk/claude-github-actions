@@ -13,31 +13,18 @@
         "mcp-server-fetch"
       ]
     },
-    "mcp-atlassian": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e", "CONFLUENCE_URL",
-        "-e", "CONFLUENCE_USERNAME",
-        "-e", "CONFLUENCE_API_TOKEN",
-        "ghcr.io/sooperset/mcp-atlassian:latest"
-      ],
-      "env": {
-        "CONFLUENCE_URL": "https://pdisoftware.atlassian.net/wiki",
-        "CONFLUENCE_USERNAME": "prasadgk@pdinet.com",
-        "CONFLUENCE_API_TOKEN": ""
-      }
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.atlassian.com/v1/sse"]
     },
-    "ado": {
-        "type": "stdio",
-        "command": "npx",
-        "args": [
-            "-y",
-            "@azure-devops/mcp",
-            "${input:ado_org = PDIDev}"
-        ]
-    }
+    "ado":{
+         "type": "stdio",
+         "command": "npx",
+         "args": [
+             "-y",
+             "@azure-devops/mcp",
+             "pdipdidev"
+         ]
+      }
   }
 }
