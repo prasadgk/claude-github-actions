@@ -1,6 +1,6 @@
 'use client';
 
-import { Task, List } from '@/types';
+import { Task, Tag } from '@/types';
 import { ChevronRightIcon } from '@/components/icons';
 
 interface TodoListProps {
@@ -8,7 +8,7 @@ interface TodoListProps {
   selectedTaskId?: string;
   onTaskSelect: (taskId: string) => void;
   onTaskToggle: (taskId: string) => void;
-  lists: List[];
+  tags: Tag[];
 }
 
 export default function TodoList({ 
@@ -16,13 +16,8 @@ export default function TodoList({
   selectedTaskId, 
   onTaskSelect, 
   onTaskToggle,
-  lists
+  tags
 }: TodoListProps) {
-  const getListColor = (listId: string) => {
-    const list = lists.find(l => l.id === listId);
-    return list?.color || '#gray';
-  };
-
   const formatDueDate = (dueDate?: string) => {
     if (!dueDate) return '';
     const date = new Date(dueDate);
@@ -73,11 +68,18 @@ export default function TodoList({
                 
                 {task.tags.length > 0 && (
                   <div className="flex items-center gap-1">
-                    <div 
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: getListColor(task.listId) }}
-                    />
-                    <span className="capitalize">{lists.find(l => l.id === task.listId)?.name}</span>
+                    {task.tags.map(tagId => {
+                      const tag = tags.find(t => t.id === tagId);
+                      return tag ? (
+                        <span
+                          key={tagId}
+                          className="inline-block px-2 py-1 text-xs rounded-full text-gray-700"
+                          style={{ backgroundColor: tag.color }}
+                        >
+                          {tag.name}
+                        </span>
+                      ) : null;
+                    })}
                   </div>
                 )}
               </div>

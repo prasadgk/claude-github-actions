@@ -133,7 +133,7 @@ export default function Home() {
             selectedTaskId={selectedTaskId}
             onTaskSelect={setSelectedTaskId}
             onTaskToggle={handleTaskToggle}
-            lists={lists}
+            tags={tags}
           />
         </div>
       </div>
