@@ -4,7 +4,7 @@ export const sampleTasks: Task[] = [
   {
     id: '1',
     title: 'Research content ideas',
-    description: '',
+    description: 'Brainstorm and research engaging topics for upcoming blog posts and social media content.',
     completed: false,
     listId: '1',
     tags: [],
@@ -15,7 +15,7 @@ export const sampleTasks: Task[] = [
   {
     id: '2',
     title: 'Create a database of guest authors',
-    description: '',
+    description: 'Compile contact information and expertise areas of potential guest contributors.',
     completed: false,
     listId: '1',
     tags: [],
@@ -26,7 +26,7 @@ export const sampleTasks: Task[] = [
   {
     id: '3',
     title: 'Renew driver\'s license',
-    description: '',
+    description: 'Visit DMV to renew expiring driver\'s license before the deadline.',
     completed: false,
     dueDate: new Date('2022-03-22').toISOString(),
     listId: '1',
@@ -40,7 +40,7 @@ export const sampleTasks: Task[] = [
   {
     id: '4',
     title: 'Consult accountant',
-    description: '',
+    description: 'Schedule meeting to discuss tax planning strategies and quarterly business expenses.',
     completed: false,
     listId: '3',
     tags: [],
@@ -51,7 +51,7 @@ export const sampleTasks: Task[] = [
   {
     id: '5',
     title: 'Print business card',
-    description: '',
+    description: 'Design and order professional business cards with updated contact information.',
     completed: false,
     listId: '2',
     tags: [],

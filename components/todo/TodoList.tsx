@@ -58,6 +58,12 @@ export default function TodoList({
               {task.title}
             </p>
             
+            {task.description && (
+              <p className={`text-xs mt-1 ${task.completed ? 'line-through text-gray-400' : 'text-gray-600'}`} style={{ fontSize: '10px' }}>
+                {task.description}
+              </p>
+            )}
+            
             {(task.dueDate || task.subtasks.length > 0 || task.tags.length > 0) && (
               <div className="flex items-center gap-4 mt-1 text-xs text-gray-500">
                 {task.dueDate && (
